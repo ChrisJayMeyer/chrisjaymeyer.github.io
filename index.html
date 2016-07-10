@@ -49,15 +49,21 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.cyan-light_blue.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
+      html, body { height: 100% }
+      #fav-home {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+      }
+
+      #corner-header {
+       /* background-image: url("images/ship-ocean.jpg");
+        background-size:cover;*/
+      }
     </style>
   </head>
   <body>
@@ -86,7 +92,7 @@
         </div>
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
+        <header class="demo-drawer-header" id="corner-header">
           <img src="images/cjm.png" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span><a href="mailto:chrisjaymeyer@gmail.com">chrisjaymeyer@gmail.com</a></span>
@@ -94,8 +100,8 @@
           </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="https://chrisjaymeyer.github.io/fps-cardboard/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>FPS-Cardboard</a>
+          <a class="mdl-navigation__link" target="main-iframe" href="construct.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" target="_blank" href="https://chrisjaymeyer.github.io/fps-cardboard/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>FPS-Cardboard</a>
          <!-- <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
@@ -110,12 +116,11 @@
           -->
         </nav>
       </div>
-      <main class="mdl-layout__content mdl-color--grey-100">
-        <h1 style="text-align: center;">Under Construction</h1>
-        <img style="margin:0px auto; display:block;" src="./images/jack_small.gif"></img>
+      <main class="mdl-layout__content mdl-color--grey-100" style="height: 100%;">
+        <iframe src="construct.html" name="main-iframe" style="border:none; height: 100%; width: 100%;"></iframe>
       </main>
     </div>
-      <a href="https://chrisjaymeyer.github.io/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Home</a>
+      <a href="https://chrisjaymeyer.github.io/" id="fav-home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Home</a>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   </body>
 </html>
